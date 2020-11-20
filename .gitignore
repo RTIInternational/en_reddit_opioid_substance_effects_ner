@@ -139,5 +139,5 @@ cython_debug/
 
 # project
 .vscode/
-
+.DS_Store
 **/en_reddit_opioid_substance_effects_ner-base*/*
