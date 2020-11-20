@@ -35,6 +35,21 @@ print(*[(ent.text, ent.label_) for ent in nlp(t).ents], sep="\n")
 ('insomnia', 'EFFECT')
 ```
 
+## Model Notes
+
+There are actually two models available. To install the **smaller model** trained from scratch:
+
+```bash
+pip install git+https://github.com/RTIInternational/en_reddit_opioid_substance_effects_ner/
+```
+
+There is a **large model** that uses spacy's `en_core_web_lg` model as a base. This will have a different vocabulary, and could be more robust when applied to non-reddit text. Due to the model size, this model is available as a github release, which can be downloaded using:
+
+```bash
+pip install https://github.com/RTIInternational/en_reddit_opioid_substance_effects_ner/releases/download/v0.0.1/en_reddit_opioid_substance_effects_ner-base_lg-0.0.1.tar.gz
+```
+
+To use the large model, append the model name with `-base-lg`, e.g. `nlp = en_reddit_opioid_substance_effects_ner-base_lg`
 
 ## Training & Performance Notes
 
