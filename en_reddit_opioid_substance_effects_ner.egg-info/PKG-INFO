@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: en-reddit-opioid-substance-effects-ner
+Version: 0.0.1
+Summary: This is a Named Entity Recognition model intended to predict SUBSTANCES and EFFECTS related to opioid use and withdrawal. The model was trained on several thousand reddit comments from the r/opioids and r/OpiatesRecovery subreddits. There are two labeled entities, SUBSTANCE and EFFECT. EFFECT: a theraputic or adverse effect mentioned as a result or rationale for consuming a substance. SUBSTANCE: a drug, remedy, supplement, or other consumable item used to treat an effect or induce a desired effect.
+Home-page: UNKNOWN
+Author: Peter Baumgartner
+Author-email: pbaumgartner@rti.org
+License: Apache 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
