@@ -13,7 +13,11 @@ import spacy
 nlp = spacy.load("en_reddit_opioid_substance_effects_ner")
 t = """Yeah I know subs. Just never used them. Mdone is much cheaper to get and you dont have to wait untill you can use them. But I think if you really want to get off your DOC then subs are more powerfull cause they block the receptors. I myself have taken once 120mg of mdone and craved H so much that I used it to and nearly OD'd but everytime I detox I use Diazepam too. It really helps me with the insomnia and the RLS. But I prefer Xanax more. They are stronger and most of the detox time I sleep cause of them but I take high doses like 10-15mg per day plus 100mg of Diazepam through out the day and take 3 times a day the 5mg red devil Xans. It works wonders for me. Then I also use Loperamid against the diarrhea. And yeah that makes wds easy for me. Benzos are really a godsend for wds. If you have enough then detox is super easy. The last time I detoxed I had nothing because of my poor planing amd it was super hard but it was bearable. Just the puking was the hell and the RLS and insomnia. But after 5 days everything was over and I managed to stay sober for a few weeks."""
 
-print(*[(ent.text, ent.label_) for ent in nlp(t).ents], sep="\n")
+doc = nlp(t)
+
+entities = [(ent.text, ent.label_) for ent in doc.ents]
+
+print(*entities, sep="\n")
 ```
 ```
 ('subs', 'SUBSTANCE')
@@ -49,7 +53,11 @@ There is a **large model** that uses spacy's `en_core_web_lg` model as a base. T
 pip install https://github.com/RTIInternational/en_reddit_opioid_substance_effects_ner/releases/download/v0.0.1/en_reddit_opioid_substance_effects_ner-base_lg-0.0.1.tar.gz
 ```
 
-To use the large model, append the model name with `-base-lg`, e.g. `nlp = en_reddit_opioid_substance_effects_ner-base_lg`
+To use the large model, append the model name with `-base_lg`, e.g.
+
+```python
+nlp = spacy.load("en_reddit_opioid_substance_effects_ner-base_lg")
+```
 
 ## Training & Performance Notes
 
