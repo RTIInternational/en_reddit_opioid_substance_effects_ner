@@ -1,4 +1,8 @@
 # Reddit Opiates Substances & Effects NER Model
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4283916.svg)](https://doi.org/10.5281/zenodo.4283916)
+
+
 ## Summary
 
 This is a Named Entity Recognition model intended to predict SUBSTANCES and EFFECTS related to opioid use and withdrawal. The model was trained on several thousand reddit comments from the r/opioids and r/OpiatesRecovery subreddits. There are two labeled entities in this model described below:
